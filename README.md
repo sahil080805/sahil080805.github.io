@@ -72,4 +72,4 @@ Tested in headless Chromium on 18 Oct 2026 (desktop 1366 px and mobile 390 px).
 | External links open safely | Every `target="_blank"` link has `rel="noopener"` | Pass |
 | Mobile width (390 px) | No sideways scrolling | Pass |
 | Browser console | No errors | Pass |
-| W3C HTML validator ([validator.w3.org](https://validator.w3.org/)) | Check the page and write the result here | To do |
+| W3C HTML validator ([validator.w3.org](https://validator.w3.org/)) | No erros | Pass |
