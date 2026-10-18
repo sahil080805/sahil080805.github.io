@@ -1,0 +1,3 @@
+# No Python packages are needed.
+# This project is plain HTML5 and CSS (no JavaScript, no build step).
+# Open index.html in any modern browser to view it.
