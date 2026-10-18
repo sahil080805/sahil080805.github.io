@@ -1,75 +1,69 @@
-# Personal Portfolio Website
-
-A personal portfolio for **Sahil Kumar**, a Computer Science and Engineering student. Live site: https://sahil080805.github.io
+# Week 2 CSS — Styled Portfolio Website
 
 ## Project overview
-**Goal:** build a multi-section portfolio using semantic HTML5 and CSS, to practise page structure, lists, links, images and forms.
+A responsive personal portfolio website presenting Sahil Kumar's profile, projects, technical skills, experience, and contact options.
 
-**Sections:** About (with education), Featured Projects, Tech Stack, Skills, Experience and Certifications, Connect (WhatsApp and Instagram), and Contact.
+## Technology
+- HTML5 for semantic page structure
+- External CSS3 stylesheet (`style.css`)
+- Google Fonts (Poppins)
+- CSS custom properties for the color system
+- CSS Grid and Flexbox for layouts
+- Media queries for tablet/mobile responsiveness
+- Hover, focus, transition, and reduced-motion states
 
-## Setup instructions
-1. Install [VS Code](https://code.visualstudio.com/) (optional: the *Live Server* extension).
-2. Download or clone this repository:
-   ```
-   git clone https://github.com/sahil080805/sahil080805.github.io.git
-   ```
-3. Open the folder in VS Code.
-4. Open `index.html` in a browser, or right-click it and choose **Open with Live Server**.
-5. No installation or build step is needed (`requirements.txt` only explains this).
+## Setup
+1. Keep `index.html` and `style.css` in the same repository root.
+2. Keep the existing `images/` folder and its image files.
+3. Open `index.html` in a browser, or visit the deployed GitHub Pages site.
+4. If using Google Fonts, an internet connection is needed to load Poppins; the page falls back to sans-serif.
 
-## Code structure
+## CSS concepts demonstrated
+- Element, class, ID, pseudo-class and pseudo-element selectors
+- CSS variables and a consistent purple/pink color palette
+- Box model with `box-sizing`, margin, padding and borders
+- Sticky positioning for the header and focus outlines for keyboard accessibility
+- Grid for project/skills cards; Flexbox for navigation and chips
+- Hover transitions for links, buttons and cards
+- Responsive breakpoints at 900px, 700px and 420px
+- `prefers-reduced-motion` accessibility support
+
+## Project structure
+```text
+/
+├── index.html
+├── style.css
+├── README.md
+├── images/
+└── screenshots/
 ```
-├── index.html          # all page content, with CSS in a <style> block
-├── README.md           # this file
-├── requirements.txt    # optional; no packages needed
-└── images/
-    ├── profile.jpg
-    ├── profile-hero.jpg
-    ├── project-ethical-ai.jpg
-    ├── project-student-prediction.jpg
-    ├── project-suraj-freight.jpg
-    ├── screenshot-desktop.jpg
-    └── screenshot-mobile.jpg
-```
 
-## Visual documentation
-Desktop view:
+## Testing checklist
+- [ ] Desktop layout checked
+- [ ] Mobile layout checked at 420px and 700px widths
+- [ ] Navigation links and buttons tested
+- [ ] Hover/focus effects tested
+- [ ] Images load correctly
+- [ ] W3C HTML Checker run after publishing
+- [ ] Desktop/mobile screenshots visible in README
 
-![Desktop view](images/screenshot-desktop.jpg)
+## Screenshots
+Add actual screenshots of the running portfolio to `screenshots/` and embed them here using the correct filenames.
 
-Mobile view:
 
-![Mobile view](images/screenshot-mobile.jpg)
+## Responsive and interactive enhancements
+- Responsive layouts for desktop, tablet, and small mobile screens (including 375px widths).
+- Accessible collapsible mobile navigation with Escape-key support.
+- Light/dark theme toggle that attempts to remember the selected theme in the browser.
+- Scroll progress indicator, back-to-top control, and reduced-motion-aware reveal effects.
+- Improved hover/focus states, flexible project grids, responsive typography, and contact form validation.
+- SEO description and Open Graph metadata.
+- Contact form uses a `mailto:` fallback; a real backend is needed for reliable message delivery without an email app.
 
-## HTML concepts learned
-- **Document structure:** `<!DOCTYPE html>`, `<html lang="en">`, `<head>` (charset, viewport, title, description) and `<body>`.
-- **Semantic tags:** `<header>`, `<nav>`, `<main>`, `<section>`, `<article>` and `<footer>` describe what each part is for, which helps screen readers and search engines.
-- **Headings and paragraphs:** one `<h1>` for the page, `<h2>` for sections and `<h3>` for cards.
-- **Lists:** `<ul>` and `<li>` for skills, tools, certifications, project tags and the tech stack.
-- **Internal navigation:** `<a href="#projects">` jumps to the element with `id="projects"`.
-- **External links:** `target="_blank"` together with `rel="noopener noreferrer"`, plus `mailto:` and `tel:` links.
-- **Images:** `<img src alt>`. The `alt` text describes each picture for people who cannot see it.
-- **Forms:** `<label for>` linked to `<input id>`, with validation attributes `required`, `type="email"`, `minlength` and `maxlength`.
+### Files
+- `index.html` — semantic portfolio markup and metadata.
+- `style.css` — external styles, responsive breakpoints, themes, hover/focus states.
+- `script.js` — mobile menu, theme switch, scroll progress, reveal effects, back-to-top, and mailto form handling.
 
-## Technical details
-The site is static, so there are no algorithms or data structures.
-- **Architecture:** one HTML file with a `<header>` and `<nav>` at the top, nine `<section>`s inside one `<main>`, and a `<footer>`. The page needs no JavaScript.
-- **CSS:** custom properties for colours, flexbox and grid for layout, a media query for phones, hover effects and a short entrance animation that is turned off for visitors who prefer reduced motion.
-- **Font:** Times New Roman, with Times and a generic serif as fallbacks.
-- **Contact form:** it uses `action="mailto:..."`, so submitting opens the visitor's email app with the message filled in. This needs no server.
-
-## Testing evidence
-Tested in headless Chromium on 18 Oct 2026 (desktop 1366 px and mobile 390 px).
-
-| Test | Expected result | Result |
-|---|---|---|
-| All 5 images load and have alt text | Each image loads and has non-empty alt | Pass |
-| All 9 internal `#` links | Each points to an element that exists | Pass |
-| Semantic structure | 1 `header`, 1 `nav`, 1 `main`, 9 `section`, 1 `footer`, one `<h1>` | Pass |
-| Submit the empty contact form | Browser blocks it (required fields) | Pass |
-| Invalid email and short message | Browser blocks it | Pass |
-| Valid name, email and message | Form is accepted | Pass |
-| External links open safely | Every `target="_blank"` link has `rel="noopener"` | Pass |
-| Mobile width (390 px) | No sideways scrolling | Pass |
-| Browser console | No errors | Pass |
-| W3C HTML validator ([validator.w3.org](https://validator.w3.org/)) | No erros | Pass |
+### Before publishing
+Keep your existing `images/` assets in the same repository location. Upload all three code files to the repository root, then check the published site on desktop and mobile. Confirm every image path and external link works. This package has not been browser-tested or independently validated by the W3C validator.
